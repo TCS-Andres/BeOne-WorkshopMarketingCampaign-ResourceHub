@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ------------------------------------------------------------------ */
+/*  BE ONE — AI Marketing Workshop Resource Hub                        */
+/*  Design tokens (brief §3). Warm, premium, clean. Light theme.      */
+/* ------------------------------------------------------------------ */
+
+@theme {
+  /* Brand palette */
+  --color-navy: #16243d; /* primary text / headers */
+  --color-blue: #2c5697; /* links, buttons, accents */
+  --color-blue-light: #5b86c2;
+  --color-gold: #c8a24b; /* highlight accents, hovers, dividers */
+  --color-gold-soft: #e7d3a3;
+  --color-cream: #fbf9f5; /* page background — warm off-white */
+  --color-bg-blue: #eaf1fa; /* section / card backgrounds */
+  --color-bg-grey: #f3f5f8;
+  --color-ink: #2b2b2b;
+  --color-muted: #5a6473;
+  --color-line: #d7dee8;
+
+  /* Typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+
+  /* Soft, premium shadows */
+  --shadow-card: 0 1px 2px rgba(22, 36, 61, 0.04),
+    0 8px 24px rgba(22, 36, 61, 0.06);
+  --shadow-card-hover: 0 2px 4px rgba(22, 36, 61, 0.06),
+    0 16px 40px rgba(22, 36, 61, 0.1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Smooth-scroll anchor navigation */
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Section anchors clear the sticky sub-nav when jumped to */
+.scroll-anchor {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Headings default to the warm display face */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+/* Toast pop-in */
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-toast-in {
+  animation: toast-in 0.18s ease-out;
 }
