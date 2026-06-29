@@ -35,6 +35,10 @@ export type Tool = {
   blurb: string;
   free: boolean;
   url: string;
+  /** Custom badge text; falls back to "Free to start" when free. */
+  tag?: string;
+  /** Bonus pick (not used in class) — shown in its own subsection. */
+  bonus?: boolean;
 };
 
 export const HERO_BADGES = [
@@ -199,6 +203,16 @@ export const TOOLS: Tool[] = [
     blurb: "Course platform & class activity feed.",
     free: true,
     url: "https://community.branchesb1.org/",
+  },
+  {
+    id: "wisprflow",
+    name: "Wispr Flow",
+    blurb:
+      "Talk instead of type — fast, accurate AI dictation that works in any app. Handy for drafting prompts, posts, and emails by voice.",
+    free: true,
+    tag: "1 month free",
+    url: "https://wisprflow.ai/r?ANDRES500",
+    bonus: true,
   },
 ];
 
