@@ -1,5 +1,6 @@
 import { HERO_BADGES, FULL_COURSE_FILE } from "../lib/content";
 import { DownloadIcon, ArrowUpRightIcon } from "./icons";
+import { CoBrandLogos } from "./CoBrandLogos";
 
 export function Hero() {
   return (
@@ -16,13 +17,9 @@ export function Hero() {
       {/* subtle gold hairline at the bottom edge */}
       <div className="absolute inset-x-0 bottom-0 h-px bg-gold/40" aria-hidden="true" />
 
-      <div className="relative mx-auto max-w-5xl px-6 pb-20 pt-12 sm:pt-16">
-        {/* Logo drop-in spot (replace this block with your logo later) */}
-        <div className="mb-12 flex items-center gap-3">
-          <div className="flex h-9 items-center rounded-lg border border-cream/25 px-3 text-xs font-semibold uppercase tracking-widest text-cream/70">
-            Logo
-          </div>
-        </div>
+      <div className="relative mx-auto max-w-5xl px-6 pb-16 pt-12 sm:pt-16">
+        {/* Co-brand logo lockup */}
+        <CoBrandLogos className="mb-12" />
 
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">
           BE ONE Gen AI Program
