@@ -177,7 +177,7 @@ export const TOOLS: Tool[] = [
     name: "ElevenLabs",
     blurb: "Clones your voice for the video.",
     free: true,
-    url: "https://elevenlabs.io",
+    url: "https://try.elevenlabs.io/qnhn0xltqd6i", // referral link
   },
   {
     id: "kie",
