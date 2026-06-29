@@ -11,6 +11,21 @@ export type Resource = {
   available: boolean;
 };
 
+// A numbered "how-to" group rendered as a step guide inside a module.
+export type StepGroup = {
+  title: string;
+  intro?: string;
+  steps: string[];
+  tip?: string;
+};
+
+// An external action link (e.g. "Upload your video") rendered as a button.
+export type ModuleLink = {
+  label: string;
+  url: string;
+  note?: string;
+};
+
 export type Module = {
   /** Anchor id + sub-nav target. */
   id: string;
@@ -27,6 +42,10 @@ export type Module = {
   toolsUsed: string[];
   /** Shown when there are no tools for a module (Module 4). */
   toolsUsedNote?: string;
+  /** Optional step-by-step how-to groups. */
+  steps?: StepGroup[];
+  /** Optional external action link (e.g. upload your video). */
+  uploadLink?: ModuleLink;
 };
 
 export type Tool = {
@@ -134,6 +153,34 @@ export const MODULES: Module[] = [
       },
     ],
     questionnaire: "avatar",
+    steps: [
+      {
+        title: "Create your AI avatar",
+        intro: "Made in HeyGen from a single photo.",
+        steps: [
+          "Take a photo of yourself — a clear selfie or a full-body shot both work.",
+          "In HeyGen, go to Avatars → Manage Avatars.",
+          "Click New Avatar, then choose Create a virtual character.",
+          "Upload your photo. HeyGen builds your avatar.",
+        ],
+        tip: "Use a simple, plain background with nothing moving behind you — standing against a blank wall is ideal. Busy or cluttered backgrounds make a weaker avatar.",
+      },
+      {
+        title: "Clone your voice, then finish your video",
+        intro: "Made in ElevenLabs, then brought back into HeyGen.",
+        steps: [
+          "In ElevenLabs, open Voices in the left sidebar.",
+          "Click Create New Voice, then choose Instant Voice Clone.",
+          "Record about 2 minutes of your voice as a voice note, upload it, and name it with your name.",
+          "Generate it once to check the clone sounds like you.",
+          "Go to Text to Speech in the left sidebar, paste your script (from the questionnaire above), choose your cloned voice, and generate the speech.",
+          "When it sounds right, download the audio.",
+          "Back in HeyGen, go to Avatars and select your avatar.",
+          "Choose Use in a Video → Add a Script, then upload your audio (or type or record your script there).",
+          "Generate your video.",
+        ],
+      },
+    ],
     toolsUsed: ["claude", "heygen", "elevenlabs", "kie"],
   },
   {
@@ -155,6 +202,11 @@ export const MODULES: Module[] = [
         available: true,
       },
     ],
+    uploadLink: {
+      label: "Upload your video",
+      url: "https://drive.google.com/drive/folders/1URNGdkDb0uiMXFZqh0xndApZiDVYTegK?usp=sharing",
+      note: "Made your video? Drop it in our shared Drive folder to share it with the class.",
+    },
     toolsUsed: [],
     toolsUsedNote: "—",
   },

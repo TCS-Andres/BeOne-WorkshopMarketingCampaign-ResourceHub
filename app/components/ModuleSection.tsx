@@ -2,7 +2,8 @@ import type { Module } from "../lib/content";
 import { TOOLS_BY_ID } from "../lib/content";
 import { DownloadButton } from "./DownloadButton";
 import { Questionnaire } from "./Questionnaire";
-import { CheckIcon } from "./icons";
+import { StepGuide } from "./StepGuide";
+import { CheckIcon, UploadIcon, ArrowUpRightIcon } from "./icons";
 
 function ToolsUsed({ module }: { module: Module }) {
   if (module.toolsUsed.length === 0) {
@@ -87,10 +88,35 @@ export function ModuleSection({ module }: { module: Module }) {
           </div>
         )}
 
-        {/* Interactive questionnaire (Modules 1 & 2) */}
+        {/* Interactive questionnaire (Modules 1, 2 & 3) */}
         {module.questionnaire && (
           <div className="mt-8">
             <Questionnaire which={module.questionnaire} />
+          </div>
+        )}
+
+        {/* Step-by-step how-to (Module 3) */}
+        {module.steps && <StepGuide groups={module.steps} />}
+
+        {/* Upload / external action (Module 4) */}
+        {module.uploadLink && (
+          <div className="mt-8 rounded-2xl border border-gold/40 bg-gold/[0.07] p-5 sm:p-6">
+            <h3 className="text-base font-semibold text-navy">
+              Share your video
+            </h3>
+            {module.uploadLink.note && (
+              <p className="mt-1 text-sm text-muted">{module.uploadLink.note}</p>
+            )}
+            <a
+              href={module.uploadLink.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 rounded-xl bg-blue px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-gold hover:text-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue"
+            >
+              <UploadIcon className="h-4 w-4" />
+              {module.uploadLink.label}
+              <ArrowUpRightIcon className="h-4 w-4" />
+            </a>
           </div>
         )}
 
