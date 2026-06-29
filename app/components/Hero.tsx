@@ -1,5 +1,5 @@
-import { HERO_BADGES, FULL_COURSE_FILE } from "../lib/content";
-import { DownloadIcon, ArrowUpRightIcon } from "./icons";
+import { HERO_BADGES, WEBINAR } from "../lib/content";
+import { CalendarIcon, ArrowUpRightIcon } from "./icons";
 import { CoBrandLogos } from "./CoBrandLogos";
 
 export function Hero() {
@@ -51,12 +51,13 @@ export function Hero() {
         {/* Primary buttons */}
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <a
-            href={FULL_COURSE_FILE}
-            download
+            href={WEBINAR.rsvpUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-xl bg-gold px-6 py-3.5 text-base font-semibold text-navy shadow-lg transition-colors hover:bg-gold-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream"
           >
-            <DownloadIcon className="h-5 w-5" />
-            Download the Full Course
+            <CalendarIcon className="h-5 w-5" />
+            {WEBINAR.ctaLabel}
           </a>
           <a
             href="#tools"

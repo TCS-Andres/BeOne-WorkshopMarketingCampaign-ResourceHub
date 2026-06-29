@@ -3,6 +3,7 @@ import { Hero } from "./components/Hero";
 import { StickyNav } from "./components/StickyNav";
 import { ModuleSection } from "./components/ModuleSection";
 import { ToolsGrid } from "./components/ToolsGrid";
+import { WebinarCTA } from "./components/WebinarCTA";
 import { Footer } from "./components/Footer";
 
 export default function Home() {
@@ -18,6 +19,8 @@ export default function Home() {
           ))}
 
           <ToolsGrid />
+
+          <WebinarCTA />
         </div>
       </main>
 

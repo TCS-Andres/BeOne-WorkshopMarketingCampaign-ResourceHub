@@ -75,7 +75,20 @@ export const NAV_SECTIONS: { id: string; label: string }[] = [
   { id: "create-content", label: "Create Content" },
   { id: "launch-grow", label: "Launch & Grow" },
   { id: "tools", label: "Tools" },
+  { id: "webinar", label: "Webinar" },
 ];
+
+// Live webinar CTA (hero button + bottom section).
+export const WEBINAR = {
+  eyebrow: "Live Webinar",
+  title: "Build Your AI Marketing Campaign — Live",
+  dateLine: "Monday, July 6 · 6:30 PM ET",
+  description:
+    "New to AI marketing? Join us live and we'll build it together — sizing your market, creating your Master Brain, and making your AI avatar video. Bring your business and your questions.",
+  ctaLabel: "RSVP for the webinar",
+  rsvpUrl:
+    "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=bjcxYnBzMDhzcGE0c2NoMXJ1cGlrdTgzcjggYW5kcmVzQG15Y3JlYXRpdmVzdHJhdGVnaXN0LmNvbQ&tmsrc=andres%40mycreativestrategist.com",
+};
 
 export const MODULES: Module[] = [
   {
