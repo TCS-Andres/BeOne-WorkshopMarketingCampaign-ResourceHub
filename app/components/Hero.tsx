@@ -31,7 +31,7 @@ export function Hero() {
           Your resource hub — everything from the workshop in one place.
         </p>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-cream/70">
-          Every module summary, the downloadable resources, two interactive
+          Every module summary, the downloadable resources, three interactive
           questionnaires you can export to PDF, and links to every tool we used
           in class. No login — bookmark it and come back anytime.
         </p>

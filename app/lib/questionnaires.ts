@@ -14,8 +14,10 @@ export type QField = {
   type: "input" | "textarea";
 };
 
+export type QuestionnaireId = "market" | "masterbrain" | "avatar";
+
 export type QConfig = {
-  id: "market" | "masterbrain";
+  id: QuestionnaireId;
   title: string;
   /** Short line under the title. */
   intro: string;
@@ -243,7 +245,64 @@ export const MASTERBRAIN_QUESTIONNAIRE: QConfig = {
   ],
 };
 
-export const QUESTIONNAIRES: Record<"market" | "masterbrain", QConfig> = {
+// Avatar Video (Module 3). 7 fields map 1:1 to slots 1–7 of the Avatar/Video
+// prompt; slot 8 (optional Master Brain paste) is left for Claude.
+export const AVATAR_QUESTIONNAIRE: QConfig = {
+  id: "avatar",
+  title: "Avatar Video Questionnaire",
+  intro:
+    "Answer these, then export your answers or copy the prompt into Claude to get your full video script plus the exact HeyGen and ElevenLabs directions. Made a Master Brain in Module 2? Paste it into Claude after for an even more on-brand video.",
+  promptFile: "/files/Avatar-Video_Prompt.md",
+  fields: [
+    {
+      id: "v1",
+      label: "1. Your business + who it's for",
+      helper: "One line on what you do and who you serve.",
+      type: "textarea",
+    },
+    {
+      id: "v2",
+      label: "2. The ONE message of this video",
+      helper:
+        "The single thing you want them to remember. Keep it to one idea, not five.",
+      type: "textarea",
+    },
+    {
+      id: "v3",
+      label: "3. The call to action",
+      helper:
+        'Exactly what they should do next. e.g. "Book a free consult" or "Tap the link."',
+      type: "input",
+    },
+    {
+      id: "v4",
+      label: "4. Where you'll post it",
+      helper: "e.g. Instagram Reel, TikTok, LinkedIn, or your website.",
+      type: "input",
+    },
+    {
+      id: "v5",
+      label: "5. Tone / energy in 3 words",
+      helper: 'e.g. "Warm, confident, upbeat."',
+      type: "input",
+    },
+    {
+      id: "v6",
+      label: "6. Video length",
+      helper: "30s, 45s, or 60s. Default is 45s.",
+      type: "input",
+    },
+    {
+      id: "v7",
+      label: "7. Anything to include or avoid?",
+      helper: "An offer, a phrase you love, or a claim you can't make.",
+      type: "textarea",
+    },
+  ],
+};
+
+export const QUESTIONNAIRES: Record<QuestionnaireId, QConfig> = {
   market: MARKET_QUESTIONNAIRE,
   masterbrain: MASTERBRAIN_QUESTIONNAIRE,
+  avatar: AVATAR_QUESTIONNAIRE,
 };

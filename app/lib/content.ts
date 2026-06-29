@@ -22,7 +22,7 @@ export type Module = {
   checklist?: string[];
   resources: Resource[];
   /** Which interactive questionnaire renders in this module, if any. */
-  questionnaire?: "market" | "masterbrain";
+  questionnaire?: "market" | "masterbrain" | "avatar";
   /** Tool ids referenced by this module (links down to §4.4). */
   toolsUsed: string[];
   /** Shown when there are no tools for a module (Module 4). */
@@ -125,7 +125,7 @@ export const MODULES: Module[] = [
     number: "03",
     title: "Create Content (AI Avatar Video)",
     summary:
-      "Turn a photo, your voice, and a short script into a branded video of yourself — made with AI in minutes. Use the prompt with Claude, then bring it to life with HeyGen and ElevenLabs.",
+      "Turn a photo, your voice, and a short script into a branded video of yourself — made with AI in minutes. Fill in the questionnaire below, copy the prompt into Claude for your script and tool directions, then bring it to life with HeyGen and ElevenLabs.",
     resources: [
       {
         label: "Download the Avatar/Video prompt",
@@ -133,6 +133,7 @@ export const MODULES: Module[] = [
         available: true,
       },
     ],
+    questionnaire: "avatar",
     toolsUsed: ["claude", "heygen", "elevenlabs", "kie"],
   },
   {

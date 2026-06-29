@@ -14,9 +14,14 @@ const KICKER = "BE ONE Gen AI Program · The Creative Strategist";
 const FILE_NAMES: Record<string, string> = {
   market: "My-Market-Sizing-Answers",
   masterbrain: "My-Master-Brain-Answers",
+  avatar: "My-Avatar-Video-Answers",
 };
 
-export function Questionnaire({ which }: { which: "market" | "masterbrain" }) {
+export function Questionnaire({
+  which,
+}: {
+  which: "market" | "masterbrain" | "avatar";
+}) {
   const config = QUESTIONNAIRES[which];
   const storageKey = `${STORAGE_PREFIX}${which}`;
 
