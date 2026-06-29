@@ -220,4 +220,22 @@ export const TOOLS_BY_ID: Record<string, Tool> = Object.fromEntries(
   TOOLS.map((t) => [t.id, t]),
 );
 
+// Downloadable worksheets/templates surfaced in the Tools & Software section.
+export type ToolResource = {
+  name: string;
+  blurb: string;
+  file: string;
+  tag?: string;
+};
+
+export const TOOL_RESOURCES: ToolResource[] = [
+  {
+    name: "Campaign Canvas",
+    blurb:
+      "A one-page planner to map and launch one focused campaign — your offer, audience, message, channels, and timeline.",
+    file: "/files/BE-ONE_Campaign-Canvas.docx",
+    tag: "Worksheet",
+  },
+];
+
 export const B1_URL = "https://community.branchesb1.org/";
