@@ -1,6 +1,6 @@
 # Market-Sizing Generator Prompt — TAM · SAM · SOM
 
-> **How to use this file:** Fill in your 10 answers from the *Market-Sizing Questionnaire* in the **INPUT** section below, then send this entire file to Claude. It will build your complete TAM · SAM · SOM market report.
+> **How to use this file:** Fill in your 10 answers from the *Market-Sizing Questionnaire* in the **INPUT** section below, then send this entire file to Claude. It will build your complete TAM · SAM · SOM market report and deliver it as a clean, downloadable PDF.
 >
 > *BE ONE Gen AI Program · The Creative Strategist*
 
@@ -34,19 +34,33 @@ Using the 10 answers in the **INPUT** section, write a complete TAM · SAM · SO
 9. **12-month growth goal:**
 10. **Known market numbers (optional):**
 
-## OUTPUT FORMAT — THE MARKET-SIZING REPORT
-Produce the report with these sections, in this order:
+## DELIVERABLE — A POLISHED, DOWNLOADABLE PDF
+Deliver the final report as a **clean, presentable PDF the owner can download** — not a chat message, not markdown, and not a plain-text or `.md` file. Design it like a professional market brief the owner could proudly hand to a banker or partner:
+
+- **Branded & modern.** Use this palette: deep navy `#16243D` for headings, blue `#2C5697` for accents, gold `#C8A24B` for dividers/highlights, on a warm off-white `#FBF9F5` background. Clean sans-serif body, large confident headings, generous whitespace.
+- **Header:** the report title ("Market-Sizing Report — TAM · SAM · SOM"), the business name, and today's date.
+- **Footer on each page:** "The Creative Strategist · A Branches BE ONE Program" with page numbers.
+- **Charts & visuals (do include these):**
+  - A **TAM → SAM → SOM funnel** (a funnel graphic or nested bars) showing the three numbers to scale, so the shrinking opportunity is obvious at a glance.
+  - A simple **bar chart** comparing *where you are today* vs. *your 12-month goal* vs. *your SOM*, so the Reality Check is visual.
+  - Keep charts simple, clearly labeled, and on-brand (navy/blue/gold).
+- **Scannable layout:** each section below as its own clearly-headed block, with key numbers pulled out large.
+
+**How to deliver the PDF:** generate it as an actual downloadable PDF file. If you cannot attach a PDF directly in this environment, instead build a single self-contained, print-ready HTML document (an artifact) styled exactly as above, and tell the owner to choose **Print → "Save as PDF."** Either way, the result must be a clean PDF — never a markdown or plain-text dump.
+
+## REPORT CONTENTS — sections, in this order
+The PDF must contain these sections, in order:
 
 1. **Snapshot** — one short paragraph: what they sell, who they serve, and where. Sets the frame.
 2. **Your Market in Plain English** — a one-line definition each of TAM, SAM, and SOM as they apply to *this* business.
 3. **TAM — Total Addressable Market** — the full size of the demand for what they sell within their realistic reach. Give a number (or range), and show the math and assumptions.
 4. **SAM — Serviceable Addressable Market** — the slice they can actually serve given their niche, model, and geography. Number + math.
-5. **SOM — Serviceable Obtainable Market** — what they can realistically win in the next 12 months given their capacity, traction, and goal. Number + math, cross-checked against their stated capacity and goal.
-6. **Reality Check** — does their 12-month goal fit inside their SOM and capacity? Flag any gap (e.g., "your goal needs ~X more orders/month than your current capacity allows").
+5. **SOM — Serviceable Obtainable Market** — what they can realistically win in the next 12 months given their capacity, traction, and goal. Number + math, cross-checked against their stated capacity and goal. *(Place the funnel chart near sections 3–5.)*
+6. **Reality Check** — does their 12-month goal fit inside their SOM and capacity? Flag any gap (e.g., "your goal needs ~X more orders/month than your current capacity allows"). *(Place the today-vs-goal-vs-SOM bar chart here.)*
 7. **Where to Focus First** — 3–5 concrete moves to capture more of the SOM (sharpen the niche, raise price, add capacity, target the best segment, etc.).
 8. **Assumptions & What to Verify** — a short bulleted list of every estimate you made and the real numbers they should look up to firm it up.
 
-Use clear numbers and short headers throughout. Where helpful, present TAM/SAM/SOM as a simple nested list so the funnel is obvious.
+Use clear numbers and short headers throughout.
 
 ## TONE
 Practical, encouraging, and honest. Write so the owner finishes reading and thinks, "Okay — now I actually know how big this is and what to do next."

@@ -1,6 +1,6 @@
 # Master Brain Generator Prompt — Focused Version
 
-> **How to use this file:** Fill in your seed paragraph and your answers from the *Focused Master Brain Questionnaire* in the **INPUT** section below, then send this entire file to Claude. It will build your complete Master Brain document.
+> **How to use this file:** Fill in your seed paragraph and your answers from the *Focused Master Brain Questionnaire* in the **INPUT** section below, then send this entire file to Claude. It will build your complete Master Brain document and deliver it as a clean, downloadable PDF.
 >
 > *BE ONE Gen AI Program · The Creative Strategist*
 
@@ -46,8 +46,19 @@ Using the seed paragraph and 20 answers in the **INPUT** section, write a comple
 19. **Tools / software / AI you currently use:**
 20. **A signature story / analogy / saying + anything essential:**
 
-## OUTPUT FORMAT — THE MASTER BRAIN DOCUMENT
-Produce the document with these sections, in this order:
+## DELIVERABLE — A POLISHED, DOWNLOADABLE PDF
+Deliver the final Master Brain as a **clean, presentable PDF the owner can download** — not a chat message, not markdown, and not a plain-text or `.md` file. Design it like a professional brand reference document:
+
+- **Branded & modern.** Use this palette: deep navy `#16243D` for headings, blue `#2C5697` for accents, gold `#C8A24B` for dividers/highlights, on a warm off-white `#FBF9F5` background. Clean sans-serif body, large confident headings, generous whitespace.
+- **Cover/header:** "Master Brain" as the title, the business name, and today's date.
+- **Footer on each page:** "The Creative Strategist · A Branches BE ONE Program" with page numbers.
+- **Make key parts pop with callout boxes** (no charts needed — this is a reference document): put the **Brand Personality & Values**, the **"only" positioning statement**, and especially the **AI Operating Instructions** in their own highlighted, gold-bordered boxes so they're easy to find and reuse.
+- **Scannable layout:** each section below as its own clearly-headed block.
+
+**How to deliver the PDF:** generate it as an actual downloadable PDF file. If you cannot attach a PDF directly in this environment, instead build a single self-contained, print-ready HTML document (an artifact) styled exactly as above, and tell the owner to choose **Print → "Save as PDF."** Either way, the result must be a clean PDF — never a markdown or plain-text dump.
+
+## DOCUMENT CONTENTS — sections, in this order
+The PDF must contain these sections, in order:
 
 1. **Business Snapshot** — name, role, location, and a one-paragraph overview of what they do and who they serve.
 2. **Story & Purpose** — their journey, their mission, and the deeper "why" behind the business.

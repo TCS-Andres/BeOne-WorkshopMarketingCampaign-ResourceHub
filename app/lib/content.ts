@@ -81,7 +81,7 @@ export const MODULES: Module[] = [
     number: "01",
     title: "Know Your Market",
     summary:
-      "Size your real opportunity with TAM, SAM & SOM, and pinpoint exactly who you serve. Fill in the questionnaire below, download your answers, and copy the prompt into Claude to generate your market report.",
+      "Size your real opportunity with TAM, SAM & SOM, and pinpoint exactly who you serve. Fill in the questionnaire below, download your answers, and copy the prompt into Claude to generate your market report as a clean, downloadable PDF.",
     resources: [
       {
         label: "Download the Market-Sizing questionnaire",
@@ -103,7 +103,7 @@ export const MODULES: Module[] = [
     number: "02",
     title: "Build Your Master Brain",
     summary:
-      "Create one AI-ready document that captures the truth of your business, so every AI tool sounds like you. Answer the focused questionnaire, then run the generator prompt in Claude.",
+      "Create one AI-ready document that captures the truth of your business, so every AI tool sounds like you. Answer the focused questionnaire, then run the generator prompt in Claude to produce a polished, downloadable PDF.",
     resources: [
       {
         label: "Download the Master Brain questionnaire",

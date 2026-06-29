@@ -1,6 +1,6 @@
 # AI Avatar Video — Script & Direction Generator Prompt
 
-> **How to use this file:** Fill in the **INPUT** section below, then send this entire file to Claude. It will write a short, on-brand video script plus the exact voice and avatar directions you'll use in ElevenLabs and HeyGen. If you've built your Master Brain (Module 2), paste it in too — your video will sound even more like you.
+> **How to use this file:** Fill in the **INPUT** section below, then send this entire file to Claude. It will write a short, on-brand video script plus the exact voice and avatar directions you'll use in ElevenLabs and HeyGen, and deliver it as a clean, downloadable PDF "video brief." If you've built your Master Brain (Module 2), paste it in too — your video will sound even more like you.
 >
 > *BE ONE Gen AI Program · The Creative Strategist*
 
@@ -41,8 +41,18 @@ Where the input is thin, infer a sensible version from what they gave you (and f
 7. **Anything to include or avoid (an offer, a phrase, a claim you can't make):**
 8. **(Optional) Paste your Master Brain document here for voice & detail:**
 
-## OUTPUT FORMAT
-Produce the deliverable in this order:
+## DELIVERABLE — A POLISHED, DOWNLOADABLE PDF
+Deliver the final video brief as a **clean, presentable PDF the owner can download** — not a chat message, not markdown, and not a plain-text or `.md` file. Design it like a tidy one-page production brief:
+
+- **Branded & modern.** Use this palette: deep navy `#16243D` for headings, blue `#2C5697` for accents, gold `#C8A24B` for dividers/highlights, on a warm off-white `#FBF9F5` background. Clean sans-serif body, generous whitespace.
+- **Header:** "Your AI Avatar Video — Brief," the business name, and today's date.
+- **Footer:** "The Creative Strategist · A Branches BE ONE Program."
+- **Optional visual:** a simple horizontal **timeline strip** of the script beats (Hook → Point → Call to Action) with their seconds, so the flow is obvious. Put the script, voice direction, and avatar direction in clearly separated, labeled blocks.
+
+**How to deliver the PDF:** generate it as an actual downloadable PDF file. If you cannot attach a PDF directly in this environment, instead build a single self-contained, print-ready HTML document (an artifact) styled exactly as above, and tell the owner to choose **Print → "Save as PDF."** Either way, the result must be a clean PDF — never a markdown or plain-text dump.
+
+## BRIEF CONTENTS — in this order
+The PDF must contain these, in order:
 
 1. **The Script** — labeled by beat, with approximate seconds:
    - **Hook (0–3s)** — the scroll-stopper.
